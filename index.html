@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal OS v2</title>
+</head>
+<body>
+    <h1>Universal OS v2</h1>
+    <button id="greet-btn">Greet</button>
+    <script type="module">
+        import init, { greet } from './pkg/universal_os_v2.js';
+
+        async function main() {
+            await init();
+            document.getElementById('greet-btn').addEventListener('click', greet);
+        }
+
+        main();
+    </script>
+</body>
+</html>
